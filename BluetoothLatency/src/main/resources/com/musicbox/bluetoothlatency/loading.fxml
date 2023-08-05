@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.musicbox.bluetoothlatency.SceneController"
+          fx:id="mainPane"
+          styleClass="mainPane">
+
+    <VBox>
+        <Label styleClass="header" text="Initializing" />
+        <HBox>
+            <Label fx:id="textBox" text="Wait for device inquiry to complete." />
+        </HBox>
+    </VBox>
+
+    <stylesheets><URL value="@stylesheet.css" /></stylesheets>
+</VBox>
+

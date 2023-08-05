@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.musicbox.bluetoothlatency.TableController"
+          fx:id="mainPane"
+          styleClass="mainPane">
+
+
+
+        <Label text="Results" styleClass="header"/>
+        <HBox>
+            <Label fx:id="textBox"/>
+            <Button fx:id="openButton"  onAction="#openButtonClick" text="Save File" />
+        </HBox>
+        <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <columns>
+
+                <TableColumn fx:id="timeAtOutCol" text="Time Sent(ms)">
+                    <cellValueFactory><PropertyValueFactory property="timeAtout" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="returnedValueCol" text="Returned Value">
+                    <cellValueFactory><PropertyValueFactory property="returnedValue" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="timeAtReturnCol" text="Time At Return(ms)">
+                    <cellValueFactory><PropertyValueFactory property="timeAtReturn" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="differenceCol" text="Difference(ms)">
+                    <cellValueFactory><PropertyValueFactory property="difference" />
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+    <stylesheets><URL value="@stylesheet.css" /></stylesheets>
+</VBox>
